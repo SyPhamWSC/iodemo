@@ -1,6 +1,7 @@
 package com.leojr.iodemo.ui;
 
 import com.leojr.iodemo.common.CommonVls;
+import com.leojr.iodemo.ui.panel.ContainerPanel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,6 +15,7 @@ public class GUI extends JFrame{
 
         ContainerPanel containerPanel = new ContainerPanel();
         add(containerPanel);
+
         pack();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }

@@ -1,10 +1,14 @@
-package com.leojr.iodemo.ui;
+package com.leojr.iodemo.ui.panel;
 
+
+import com.leojr.iodemo.ui.frame.CountWordFrame;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class ContainerPanel extends JPanel{
+public class ContainerPanel extends AbsBasePanel{
 
     private static final String BTN_COUNT_WORD = "Count Word";
     private static final String BTN_CONTACTS_MANAGER = "Contacts Manager";
@@ -21,9 +25,11 @@ public class ContainerPanel extends JPanel{
     public ContainerPanel(){
         initComps();
         addComps();
+        setActionListener();
     }
 
-    private void initComps() {
+    @Override
+    protected void initComps() {
         FlowLayout layout = new FlowLayout();
         layout.setHgap(20);
         layout.setVgap(20);
@@ -43,10 +49,27 @@ public class ContainerPanel extends JPanel{
 
     }
 
-    private void addComps(){
+    @Override
+    protected void addComps(){
         add(btnCountWord);
         add(btnContactsManager);
         add(btnListFile);
         add(btnSearchFileInFolder);
+    }
+
+    @Override
+    protected void setActionListener(){
+        btnCountWord.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                SwingUtilities.invokeLater(new Runnable() {
+                    @Override
+                    public void run() {
+                        CountWordFrame countWordFrame = new CountWordFrame();
+                        countWordFrame.setVisible(true);
+                    }
+                });
+            }
+        });
     }
 }
