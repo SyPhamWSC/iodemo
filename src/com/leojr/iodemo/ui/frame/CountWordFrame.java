@@ -1,7 +1,6 @@
 package com.leojr.iodemo.ui.frame;
 
 import com.leojr.iodemo.common.CommonVls;
-import com.leojr.iodemo.ui.panel.ContainerPanel;
 import com.leojr.iodemo.ui.panel.CountWordPanel;
 
 import javax.swing.*;

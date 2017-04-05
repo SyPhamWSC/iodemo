@@ -90,8 +90,6 @@ public class CountWordPanel extends AbsBasePanel{
                     resultReadFile = resultReadFile.replaceAll("!","");
                     resultReadFile.trim();
 
-
-
                     String [] arr = resultReadFile.split("\\s+");
                     Map<String,Integer> map = new TreeMap<String,Integer>();
                     for(String key : arr){

@@ -2,6 +2,7 @@ package com.leojr.iodemo.ui.panel;
 
 
 import com.leojr.iodemo.ui.frame.CountWordFrame;
+import com.leojr.iodemo.ui.frame.ListFileFrame;
 
 import javax.swing.*;
 import java.awt.*;
@@ -67,6 +68,19 @@ public class ContainerPanel extends AbsBasePanel{
                     public void run() {
                         CountWordFrame countWordFrame = new CountWordFrame();
                         countWordFrame.setVisible(true);
+                    }
+                });
+            }
+        });
+
+        btnListFile.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                SwingUtilities.invokeLater(new Runnable() {
+                    @Override
+                    public void run() {
+                        ListFileFrame listFileFrame = new ListFileFrame();
+                        listFileFrame.setVisible(true);
                     }
                 });
             }
