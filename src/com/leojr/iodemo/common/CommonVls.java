@@ -12,6 +12,9 @@ public class CommonVls {
     public static final int LIST_FILE_WIDTH = 400;
     public static final int LIST_FLIE_HEIGHT = 200;
 
+    public static final int SEARCH_FILE_WIDTH = 400;
+    public static final int SEARCH_FILE_HEIGHT = 300;
+
     public static final int WIDTH_GUI = 350;
     public static final int HEIGHT_GUI = 130;
 

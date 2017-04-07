@@ -3,6 +3,7 @@ package com.leojr.iodemo.ui.panel;
 
 import com.leojr.iodemo.ui.frame.CountWordFrame;
 import com.leojr.iodemo.ui.frame.ListFileFrame;
+import com.leojr.iodemo.ui.frame.SearchFileFrame;
 
 import javax.swing.*;
 import java.awt.*;
@@ -19,7 +20,6 @@ public class ContainerPanel extends AbsBasePanel{
     private static final int BTN_HEIGHT = 20;
 
     private JButton btnCountWord;
-    private JButton btnContactsManager;
     private JButton btnListFile;
     private JButton btnSearchFileInFolder;
 
@@ -39,9 +39,6 @@ public class ContainerPanel extends AbsBasePanel{
         btnCountWord = new JButton(BTN_COUNT_WORD);
         btnCountWord.setPreferredSize(new Dimension(BTN_WIDTH,BTN_HEIGHT));
 
-        btnContactsManager = new JButton(BTN_CONTACTS_MANAGER);
-        btnContactsManager.setPreferredSize(new Dimension(BTN_WIDTH,BTN_HEIGHT));
-
         btnListFile = new JButton(BTN_LIST_FILE);
         btnListFile.setPreferredSize(new Dimension(BTN_WIDTH,BTN_HEIGHT));
 
@@ -53,7 +50,6 @@ public class ContainerPanel extends AbsBasePanel{
     @Override
     protected void addComps(){
         add(btnCountWord);
-        add(btnContactsManager);
         add(btnListFile);
         add(btnSearchFileInFolder);
     }
@@ -81,6 +77,19 @@ public class ContainerPanel extends AbsBasePanel{
                     public void run() {
                         ListFileFrame listFileFrame = new ListFileFrame();
                         listFileFrame.setVisible(true);
+                    }
+                });
+            }
+        });
+
+        btnSearchFileInFolder.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                SwingUtilities.invokeLater(new Runnable() {
+                    @Override
+                    public void run() {
+                        SearchFileFrame searchFileFrame = new SearchFileFrame();
+                        searchFileFrame.setVisible(true);
                     }
                 });
             }

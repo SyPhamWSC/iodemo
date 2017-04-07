@@ -1,7 +1,5 @@
 package com.leojr.iodemo.ui.panel;
 
-import com.leojr.iodemo.common.CommonVls;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -12,6 +10,10 @@ public class ListFilePanel extends AbsBasePanel {
 
     private static final String TEXT_CONTENT = "Insert Directory";
     private static final String BTN_LIST_FILE = "List File";
+
+    private static final int HEIGHT_COMPONENT = 20;
+    private static final int WIDTH_TEXT_FIELD = 300;
+    private static final int WIDTH_BTN = 150;
 
     private JLabel taContent;
     private TextField tfInsertDirectory;
@@ -30,14 +32,14 @@ public class ListFilePanel extends AbsBasePanel {
         setLayout(flowLayout);
 
         taContent = new JLabel();
-        taContent.setPreferredSize(new Dimension(300,20));
+        taContent.setPreferredSize(new Dimension(WIDTH_TEXT_FIELD,HEIGHT_COMPONENT));
         taContent.setText(TEXT_CONTENT);
 
         tfInsertDirectory = new TextField();
-        tfInsertDirectory.setPreferredSize(new Dimension(300,20));
+        tfInsertDirectory.setPreferredSize(new Dimension(WIDTH_TEXT_FIELD,HEIGHT_COMPONENT));
 
         btnListFile = new JButton(BTN_LIST_FILE);
-        btnListFile.setPreferredSize(new Dimension(150,20));
+        btnListFile.setPreferredSize(new Dimension(WIDTH_BTN,HEIGHT_COMPONENT));
     }
 
     @Override
